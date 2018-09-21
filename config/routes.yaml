@@ -1,0 +1,7 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+chaton:
+  path: /chaton
+  controller: App\Controller\ChatonController:helloWorld
