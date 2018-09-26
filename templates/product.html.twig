@@ -2,9 +2,20 @@
 <html>
 <head>
     <title>Produit</title>
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
 </head>
 
 <body>
-    <h1>Produit {{ slug }}</h1>
+{{ include('require/header.html.twig') }}
+
+<main role="main" class="container">
+    <div class="jumbotron">
+        <h1>{{ cars.type }}</h1>
+        <img src="{{ asset('assets/images/' ~ cars.image) }}" alt="Une photo de {{ cars.type }}">
+        <a class="btn btn-lg btn-primary" href="#" role="button">Buy now</a>
+    </div>
+</main>
+
 </body>
 </html>

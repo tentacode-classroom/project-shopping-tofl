@@ -1,0 +1,50 @@
+<?php
+
+namespace App\Entity;
+
+class Car {
+
+    private $id;
+    private $type;
+    private $nbSeats;
+    private $price;
+    private $image;
+
+    public function getId() {
+        return $this->id;
+    }
+    public function setId(int $id): void {
+        $this->id = $id;
+    }
+
+    public function getType() {
+        return $this->type;
+    }
+    public function setType(string $type): void {
+        $this->type = $type;
+    }
+
+
+    public function getNbSeats() {
+        return $this->nbSeats;
+    }
+    public function setNbSeats(int $nbSeats): void {
+        $this->nbSeats = $nbSeats;
+    }
+
+
+    public function getPrice() {
+        return $this->price;
+    }
+    public function setPrice(float $price): void {
+        $this->price = $price;
+    }
+
+    public function getImage(): string {
+        return $this->image;
+    }
+    public function setImage(string $path) {
+        $this->image = $path;
+    }
+
+}
