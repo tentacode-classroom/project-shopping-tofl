@@ -46,6 +46,11 @@ class Car
      */
     private $year;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $nb_views;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -121,5 +126,21 @@ class Car
         $this->year = $year;
 
         return $this;
+    }
+
+    public function getNbViews(): ?int
+    {
+        return $this->nb_views;
+    }
+
+    public function setNbViews(int $nb_views): self
+    {
+        $this->nb_views = $nb_views;
+
+        return $this;
+    }
+
+    public function incrementNbViews() {
+        $this->nb_views++;
     }
 }

@@ -13,9 +13,9 @@ class ProductController extends AbstractController {
      */
     public function index(int $productId) {
 
-        /*
         $entityManager = $this->getDoctrine()->getManager();
 
+        /*
         $car = new Car();
         $car->setType('Ford Mustang');
         $car->setNbSeats('2');
@@ -29,12 +29,20 @@ class ProductController extends AbstractController {
         #$carRepository = new CarRepository();
     */
 
-        $car = $this->getDoctrine()->getRepository(Car::class)->find($productId);
+        $car = $this->getDoctrine()
+            ->getRepository(Car::class)
+            ->find($productId);
+
+        $car->incrementNbViews();
+
+        $entityManager->persist($car);
+        $entityManager->flush();
 
         if (!$car) {
-            var_dump($car);
             throw $this->createNotFoundException('No product with id ' . $productId);
         }
+
+        dump($car);
 
         $data = [
             'slug' => $productId,
