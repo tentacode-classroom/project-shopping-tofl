@@ -7,13 +7,15 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\User;
 use Symfony\Component\HttpFoundation\Request;
 use App\Form\RegistrationType;
+use Symfony\Component\Messenger\MessageBusInterface;
+use App\Message\RegistrationNotification;
 
 class RegistrationController extends AbstractController
 {
     /**
      * @Route("/signup", name="registration")
      */
-    public function index(Request $request)
+    public function index(Request $request, MessageBusInterface $bus)
     {
         $user = new User();
 
@@ -26,6 +28,8 @@ class RegistrationController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
             $entityManager->flush();
+
+            $bus->dispatch(new RegistrationNotification("L'utilisateur a bien été inscrit"));
 
             return $this->redirectToRoute('registration_validated');
         }

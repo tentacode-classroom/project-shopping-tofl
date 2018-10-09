@@ -24,7 +24,7 @@ class Tags
     private $tagname;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Car", mappedBy="tag_id")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Car", mappedBy="tag")
      */
     private $cars;
 
@@ -62,7 +62,7 @@ class Tags
     {
         if (!$this->cars->contains($car)) {
             $this->cars[] = $car;
-            $car->addTagId($this);
+            $car->addTag($this);
         }
 
         return $this;
@@ -72,7 +72,7 @@ class Tags
     {
         if ($this->cars->contains($car)) {
             $this->cars->removeElement($car);
-            $car->removeTagId($this);
+            $car->removeTag($this);
         }
 
         return $this;

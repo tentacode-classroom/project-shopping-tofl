@@ -31,11 +31,12 @@ class ProductController extends AbstractController {
         dump($car);
 
         $data = [
-            'slug' => $productId,
             'car' => $car
         ];
 
-        return $this->render('product.html.twig', $data);
+        return $this->render('product.html.twig', [
+            'car' => $car
+        ]);
     }
 
 }
