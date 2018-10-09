@@ -15,20 +15,6 @@ class ProductController extends AbstractController {
 
         $entityManager = $this->getDoctrine()->getManager();
 
-        /*
-        $car = new Car();
-        $car->setType('Ford Mustang');
-        $car->setNbSeats('2');
-        $car->setPrice('20000');
-        $car->setImage('mustang.jpeg');
-        $car->setDescription('Vroum vroum vroum');
-
-        $entityManager->persist($car);
-        $entityManager->flush();
-
-        #$carRepository = new CarRepository();
-    */
-
         $car = $this->getDoctrine()
             ->getRepository(Car::class)
             ->find($productId);

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Produit</title>
+    <title>Accueil</title>
     <link rel="stylesheet" href="{{ asset('build/app.css') }}">
 </head>
 
@@ -35,7 +35,7 @@
 </nav>
 
 <!-- Page Content -->
-<div class="container" style="position: relative; top: 70px; margin-bottom: 30px;">
+<div class="container" style="position: relative; top: 80px;">
 
     <div class="row">
 
@@ -49,33 +49,33 @@
 
         <div class="col-lg-9">
 
-            <div class="card mt-4">
-                <img class="card-img-top img-fluid" src="{{ asset('assets/images/' ~ car.image) }}" alt="Photo de {{ car.type }}">
-                <div class="card-body">
-                    <h3 class="card-title">{{ car.type }}</h3>
-                    <h4>${{ car.price }}</h4>
-                    <h6>{{ car.nbSeats }} sièges</h6>
-                    <h6>Cet fiche d'article a été vue {{ car.nbviews }} fois</h6>
-                    <p class="card-text">{{ car.description }}</p>
-                    <a class="btn btn-primary" href="#" role="button">Acheter MAINTENANT</a>
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h1>Inscription</h1>
+                    {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    {{ form_end(form) }}
                 </div>
+
             </div>
-            <!-- /.card -->
-
-
-            <!-- /.card -->
+            <!-- /.row -->
 
         </div>
         <!-- /.col-lg-9 -->
 
     </div>
+    <!-- /.row -->
 
 </div>
 <!-- /.container -->
 
+<!-- Footer -->
+
+
 <!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
 
 </body>
 </html>
