@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f354dcc6-8bbf-4a78-9484-533cf6db7438" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/Message/RegistrationNotification.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/MessageHandler/RegistrationMessageHandler.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/admin.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/templates/login.html.twig" />
-      <change beforePath="$PROJECT_DIR$/.env.dist" afterPath="$PROJECT_DIR$/.env.dist" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/MessageHandler/RegistrationNotificationHandler.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" afterPath="$PROJECT_DIR$/config/packages/security.yaml" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" afterPath="$PROJECT_DIR$/config/routes.yaml" />
       <change beforePath="$PROJECT_DIR$/config/services.yaml" afterPath="$PROJECT_DIR$/config/services.yaml" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" afterPath="$PROJECT_DIR$/phpunit.xml.dist" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Tags.php" afterPath="$PROJECT_DIR$/src/Entity/Tags.php" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" afterPath="$PROJECT_DIR$/symfony.lock" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html.twig" afterPath="$PROJECT_DIR$/templates/home.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/product.html.twig" afterPath="$PROJECT_DIR$/templates/product.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/registration.html.twig" afterPath="$PROJECT_DIR$/templates/registration.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/Message/RegistrationNotification.php" afterPath="$PROJECT_DIR$/src/Message/RegistrationNotification.php" />
+      <change beforePath="$PROJECT_DIR$/src/MessageHandler/RegistrationMessageHandler.php" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,31 +49,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RegistrationController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RegistrationController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/RegistrationController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+            <state relative-caret-position="207">
+              <caret line="9" column="52" lean-forward="false" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="services.yaml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="services.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/services.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="20" column="81" lean-forward="true" selection-start-line="20" selection-start-column="81" selection-end-line="20" selection-end-column="81" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegistrationMessageHandler.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MessageHandler/RegistrationMessageHandler.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="32" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="32" />
+            <state relative-caret-position="230">
+              <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -96,8 +72,18 @@
       <file leaf-file-name="RegistrationNotification.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Message/RegistrationNotification.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
+            <state relative-caret-position="207">
+              <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegistrationNotificationHandler.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MessageHandler/RegistrationNotificationHandler.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -152,10 +138,11 @@
         <option value="$PROJECT_DIR$/src/Controller/SecurityController.php" />
         <option value="$PROJECT_DIR$/templates/login.html.twig" />
         <option value="$PROJECT_DIR$/templates/home.html.twig" />
-        <option value="$PROJECT_DIR$/src/Message/RegistrationNotification.php" />
-        <option value="$PROJECT_DIR$/src/Controller/RegistrationController.php" />
         <option value="$PROJECT_DIR$/src/MessageHandler/RegistrationMessageHandler.php" />
         <option value="$PROJECT_DIR$/config/services.yaml" />
+        <option value="$PROJECT_DIR$/src/Message/RegistrationNotification.php" />
+        <option value="$PROJECT_DIR$/src/Controller/RegistrationController.php" />
+        <option value="$PROJECT_DIR$/src/MessageHandler/RegistrationNotificationHandler.php" />
       </list>
     </option>
   </component>
@@ -304,7 +291,7 @@
       <workItem from="1539071003926" duration="502000" />
       <workItem from="1539071641254" duration="31000" />
       <workItem from="1539071697593" duration="101000" />
-      <workItem from="1539071827439" duration="13625000" />
+      <workItem from="1539071827439" duration="16284000" />
     </task>
     <task id="LOCAL-00001" summary="Started prject">
       <created>1537525620210</created>
@@ -341,18 +328,25 @@
       <option name="project" value="LOCAL" />
       <updated>1539080727243</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Finished all steps">
+      <created>1539117542947</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1539117542947</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69276000" />
+    <option name="totallyTimeSpent" value="71935000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.159375" sideWeight="0.49491096" order="0" side_tool="false" content_ui="combo" x="480" y="110" width="320" height="580" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2390625" sideWeight="0.49491096" order="0" side_tool="false" content_ui="combo" x="480" y="110" width="320" height="580" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31062672" sideWeight="0.36510417" order="7" side_tool="true" content_ui="tabs" />
@@ -412,13 +406,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/config/packages/doctrine.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d68ff744-06cf-4fa0-b057-d8630e408895/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -772,22 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Message/RegistrationNotification.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/RegistrationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MessageHandler/RegistrationMessageHandler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -796,10 +767,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/MessageHandler/RegistrationNotificationHandler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Message/RegistrationNotification.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/services.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="20" column="81" lean-forward="true" selection-start-line="20" selection-start-column="81" selection-end-line="20" selection-end-column="81" />
+        <state relative-caret-position="230">
+          <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/RegistrationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="52" lean-forward="false" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
           <folding />
         </state>
       </provider>

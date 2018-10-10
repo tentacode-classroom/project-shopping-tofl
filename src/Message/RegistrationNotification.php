@@ -19,12 +19,4 @@ class RegistrationNotification
         return $this->message;
     }
 
-    /**
-     * @param mixed $message
-     */
-    public function setMessage($message): void
-    {
-        $this->message = $message;
-    }
-
 }
