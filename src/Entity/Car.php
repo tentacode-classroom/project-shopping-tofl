@@ -62,11 +62,11 @@ class Car
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Tags", inversedBy="cars")
      */
-    private $tag;
+    private $tags;
 
     public function __construct()
     {
-        $this->tag = new ArrayCollection();
+        $this->tags = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -177,15 +177,15 @@ class Car
     /**
      * @return Collection|Tags[]
      */
-    public function getTag(): Collection
+    public function getTags(): Collection
     {
-        return $this->tag;
+        return $this->tags;
     }
 
     public function addTag(Tags $tag): self
     {
-        if (!$this->tag->contains($tag)) {
-            $this->tag[] = $tag;
+        if (!$this->tags->contains($tag)) {
+            $this->tags[] = $tag;
         }
 
         return $this;
@@ -193,8 +193,8 @@ class Car
 
     public function removeTag(Tags $tag): self
     {
-        if ($this->tag->contains($tag)) {
-            $this->tag->removeElement($tag);
+        if ($this->tags->contains($tag)) {
+            $this->tags->removeElement($tag);
         }
 
         return $this;

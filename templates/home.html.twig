@@ -1,94 +1,30 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Accueil</title>
-        <link rel="stylesheet" href="{{ asset('build/app.css') }}">
-    </head>
+{% extends "base.html.twig" %}
 
-    <body>
+{% block title %}Accueil {% endblock %}
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive" style="height: 40px;">
-                <ul class="navbar-nav ml-auto" style="position: absolute; top: 8px;">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{{ path('home') }}">Accueil
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                    {% if not is_granted('IS_AUTHENTICATED_FULLY') %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ path('registration') }}">Inscription</a>
-                    </li>
-                    {% endif %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ path('admin') }}">Admin</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+{% block container %}
+    <div class="row">
 
-    <!-- Page Content -->
-    <div class="container" style="position: relative; top: 80px;">
-
-        <div class="row">
-
-            <div class="col-lg-3">
-                <h1 class="my-4">glublublu</h1>
-                <div class="list-group">
-                    La boutique de voiture reconnue mondialement dans le quartier comme étant la meilleure.
-                </div>
-            </div>
-            <!-- /.col-lg-3 -->
-
-            <div class="col-lg-9">
-
-                <div class="row">
-
-                    {% for car in cars %}
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100">
-                            <a href="{{ path('product', { 'productId': car.id }) }}"><img class="card-img-top" src="{{ asset('assets/images/' ~ car.image) }}" alt=""></a>
-                            <div class="card-body">
-                                <h4 class="card-title">
-                                    <a href="{{ path('product', { 'productId': car.id }) }}">{{ car.type }}</a>
-                                </h4>
-                                <h5>${{ car.price }}</h5>
-                                <p class="card-text">{{ car.description }}</p>
-                            </div>
-                            <div class="card-footer">
-                                <a class="btn btn-primary" href="{{ path('product', { 'productId': car.id }) }}" role="button">Commander</a>
-                            </div>
-                        </div>
+        {% for car in cars %}
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <a href="{{ path('product', { 'productId': car.id }) }}"><img class="card-img-top" src="{{ asset('assets/images/' ~ car.image) }}" alt=""></a>
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="{{ path('product', { 'productId': car.id }) }}">{{ car.type }}</a>
+                        </h4>
+                        <h5>${{ car.price }}</h5>
+                        <p class="card-text">{{ car.description }}</p>
                     </div>
-                    {% endfor %}
-
+                    <div class="card-footer">
+                        <a class="btn btn-primary" href="{{ path('product', { 'productId': car.id }) }}" role="button">Commander</a>
+                    </div>
                 </div>
-                <!-- /.row -->
-
             </div>
-            <!-- /.col-lg-9 -->
-
-        </div>
-        <!-- /.row -->
+        {% endfor %}
 
     </div>
-    <!-- /.container -->
+    <!-- /.row -->
+{% endblock %}
 
-    <!-- Footer -->
 
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
-
-    </body>
-</html>

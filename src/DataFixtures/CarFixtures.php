@@ -16,9 +16,9 @@ class CarFixtures extends Fixture
         // $manager->persist($product);
 
         $tagBelle = new Tags();
-        $tagBelle->setTagname('Belle');
+        $tagBelle->setName('Belle');
         $tagMoche = new Tags();
-        $tagMoche->setTagname('Moche');
+        $tagMoche->setName('Moche');
         $manager->persist($tagBelle);
         $manager->persist($tagMoche);
 

@@ -1,14 +1,15 @@
 security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
-        in_memory:
-            memory:
-                users:
-                    tom:
-                        password: azertyuiop
-                        roles: 'ROLE_ADMIN'
+        shopping_db:
+            entity:
+                class: App\Entity\User
+                property: email
+
     encoders:
-        Symfony\Component\Security\Core\User\User: plaintext
+        App\Entity\User:
+            algorithm: bcrypt
+
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
@@ -36,4 +37,5 @@ security:
     # Note: Only the *first* access control that matches will be used
     access_control:
          - { path: ^/admin, roles: ROLE_ADMIN }
+         - { path: ^/new/car, roles: ROLE_ADMIN }
         # - { path: ^/profile, roles: ROLE_USER }

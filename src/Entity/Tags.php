@@ -19,12 +19,12 @@ class Tags
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=40)
+     * @ORM\Column(type="string", length=100)
      */
-    private $tagname;
+    private $name;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Car", mappedBy="tag")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Car", mappedBy="tags")
      */
     private $cars;
 
@@ -38,14 +38,14 @@ class Tags
         return $this->id;
     }
 
-    public function getTagname(): ?string
+    public function getName(): ?string
     {
-        return $this->tagname;
+        return $this->name;
     }
 
-    public function setTagname(string $tagname): self
+    public function setName(string $name): self
     {
-        $this->tagname = $tagname;
+        $this->name = $name;
 
         return $this;
     }

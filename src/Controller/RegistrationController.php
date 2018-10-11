@@ -9,13 +9,14 @@ use Symfony\Component\HttpFoundation\Request;
 use App\Form\RegistrationType;
 use Symfony\Component\Messenger\MessageBusInterface;
 use App\Message\RegistrationNotification;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class RegistrationController extends AbstractController
 {
     /**
      * @Route("/signup", name="registration")
      */
-    public function index(Request $request, MessageBusInterface $bus)
+    public function index(Request $request, UserPasswordEncoderInterface $encoder)
     {
         $user = new User();
 
@@ -24,14 +25,14 @@ class RegistrationController extends AbstractController
 
         if ($form->isSubmitted() AND $form->isValid()) {
             $user = $form->getData();
+            $encrypted = $encoder->encodePassword($user, $user->getPassword());
+            $user->setPassword($encrypted);
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
             $entityManager->flush();
 
-            $bus->dispatch(new RegistrationNotification("L'utilisateur a bien été inscrit"));
-
-            return $this->redirectToRoute('registration_validated');
+            return $this->redirectToRoute('home');
         }
 
         return $this->render('registration.html.twig', [

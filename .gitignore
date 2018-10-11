@@ -22,6 +22,5 @@ npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-pack ###
 
-assets/
 node_modules/
 .idea/
