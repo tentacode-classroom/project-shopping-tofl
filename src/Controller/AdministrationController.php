@@ -12,8 +12,6 @@ class AdministrationController extends AbstractController
      */
     public function index()
     {
-        return $this->render('admin.html.twig', [
-            'controller_name' => 'AdministrationController',
-        ]);
+        return $this->render('admin.html.twig');
     }
 }

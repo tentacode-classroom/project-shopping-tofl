@@ -24,15 +24,11 @@ class ProductController extends AbstractController {
         $entityManager->persist($car);
         $entityManager->flush();
 
+        dump($car);
+
         if (!$car) {
             throw $this->createNotFoundException('No product with id ' . $productId);
         }
-
-        dump($car);
-
-        $data = [
-            'car' => $car
-        ];
 
         return $this->render('product.html.twig', [
             'car' => $car
