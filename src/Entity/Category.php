@@ -81,6 +81,7 @@ class Category
         return $this;
     }
 
+    /*
     public function serialize() {
         return $this->serialize(array(
             $this->id,
@@ -93,5 +94,11 @@ class Category
             $this->id,
             $this->name
             ) = unserialize($serialized, array('allowed_classes' => false));
+    }
+    */
+
+    public function __toString()
+    {
+        return $this->name;
     }
 }
