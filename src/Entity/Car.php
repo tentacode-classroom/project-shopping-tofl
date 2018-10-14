@@ -67,6 +67,7 @@ class Car
     public function __construct()
     {
         $this->tags = new ArrayCollection();
+        $this->catPhoto = new ArrayCollection();
     }
 
     public function getId(): ?int

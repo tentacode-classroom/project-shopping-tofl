@@ -80,4 +80,18 @@ class Category
 
         return $this;
     }
+
+    public function serialize() {
+        return $this->serialize(array(
+            $this->id,
+            $this->name
+        ));
+    }
+
+    public function unserialize($serialized) {
+        list(
+            $this->id,
+            $this->name
+            ) = unserialize($serialized, array('allowed_classes' => false));
+    }
 }

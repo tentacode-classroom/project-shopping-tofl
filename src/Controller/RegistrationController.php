@@ -7,8 +7,6 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\User;
 use Symfony\Component\HttpFoundation\Request;
 use App\Form\RegistrationType;
-use Symfony\Component\Messenger\MessageBusInterface;
-use App\Message\RegistrationNotification;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class RegistrationController extends AbstractController
